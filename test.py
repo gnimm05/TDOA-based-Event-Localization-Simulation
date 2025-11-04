@@ -5,13 +5,17 @@ from scipy.optimize import least_squares
 nodes = np.array([
     [0.0, 0.0],   # Node 1
     [10.0, 0.0],  # Node 2
-    [5.0, 8.0]    # Node 3
+    [2.0, 8.0],    # Node 3
+    [1.0, 4.0],     # Node 4
+    [12.0, 8.0],    # Node 5
+    
+
 ])
 
 v = 343.0  # Propagation speed (m/s), e.g., sound
 
 
-event_true = np.array([4.0, 3.0])  # True event location
+event_true = np.array([5.0, 2.0])  # True event location
 
 def distance(p1, p2):
     return np.linalg.norm(p1 - p2)
