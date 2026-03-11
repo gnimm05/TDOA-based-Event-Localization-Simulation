@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TDOA Anomaly Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="glass-header">
+            <h1>TDOA Acoustic Anomaly Detection System</h1>
+            <div class="status-indicator">
+                <span class="pulsing-dot"></span>
+                <span>System Active</span>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            <section class="col-left">
+                <div class="glass-card visualization-card">
+                    <h2>Live Detection Grid (100m x 100m)</h2>
+                    <div class="canvas-container">
+                        <canvas id="localizationCanvas" width="600" height="600"></canvas>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="col-right">
+                <div class="glass-card stat-card">
+                    <h3>Recent Anomalies</h3>
+                    <div class="value" id="anomaly-count">0</div>
+                    <div class="label">Detected</div>
+                </div>
+                
+                <div class="glass-card table-card">
+                    <h3>Alert Feed</h3>
+                    <div class="table-container">
+                        <table id="alert-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Event ID</th>
+                                    <th>Coordinate (X, Y)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="alert-tbody">
+                                <!-- Alerts JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
