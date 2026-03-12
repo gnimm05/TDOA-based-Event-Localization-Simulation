@@ -34,15 +34,22 @@
                     <div class="label">Detected</div>
                 </div>
                 
+                <div class="glass-card telemetry-card">
+                    <h3>Node Health & Telemetry</h3>
+                    <div id="telemetry-container" class="telemetry-grid">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                
                 <div class="glass-card table-card">
-                    <h3>Alert Feed</h3>
+                    <h3>Alert Feed (3D)</h3>
                     <div class="table-container">
                         <table id="alert-table">
                             <thead>
                                 <tr>
                                     <th>Time</th>
                                     <th>Event ID</th>
-                                    <th>Coordinate (X, Y)</th>
+                                    <th>Coordinate (X, Y, Z)</th>
                                 </tr>
                             </thead>
                             <tbody id="alert-tbody">
